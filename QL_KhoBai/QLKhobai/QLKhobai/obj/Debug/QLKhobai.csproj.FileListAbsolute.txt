@@ -1,0 +1,17 @@
+E:\Winform\QL_KhoBai\QLKhobai\QLKhobai\bin\Debug\QLKhobai.exe.config
+E:\Winform\QL_KhoBai\QLKhobai\QLKhobai\bin\Debug\QLKhobai.exe
+E:\Winform\QL_KhoBai\QLKhobai\QLKhobai\bin\Debug\QLKhobai.pdb
+E:\Winform\QL_KhoBai\QLKhobai\QLKhobai\obj\Debug\QLKhobai.csprojAssemblyReference.cache
+E:\Winform\QL_KhoBai\QLKhobai\QLKhobai\obj\Debug\QLKhobai.frmChititethopdong.resources
+E:\Winform\QL_KhoBai\QLKhobai\QLKhobai\obj\Debug\QLKhobai.frmThanhtoan.resources
+E:\Winform\QL_KhoBai\QLKhobai\QLKhobai\obj\Debug\QLKhobai.frmHopdong.resources
+E:\Winform\QL_KhoBai\QLKhobai\QLKhobai\obj\Debug\QLKhobai.FrmKhachhang.resources
+E:\Winform\QL_KhoBai\QLKhobai\QLKhobai\obj\Debug\QLKhobai.frmMangHinhChinh.resources
+E:\Winform\QL_KhoBai\QLKhobai\QLKhobai\obj\Debug\QLKhobai.FrmDangNhap.resources
+E:\Winform\QL_KhoBai\QLKhobai\QLKhobai\obj\Debug\QLKhobai.frmKhobai.resources
+E:\Winform\QL_KhoBai\QLKhobai\QLKhobai\obj\Debug\QLKhobai.frmKhuvuc.resources
+E:\Winform\QL_KhoBai\QLKhobai\QLKhobai\obj\Debug\QLKhobai.Properties.Resources.resources
+E:\Winform\QL_KhoBai\QLKhobai\QLKhobai\obj\Debug\QLKhobai.csproj.GenerateResource.cache
+E:\Winform\QL_KhoBai\QLKhobai\QLKhobai\obj\Debug\QLKhobai.csproj.CoreCompileInputs.cache
+E:\Winform\QL_KhoBai\QLKhobai\QLKhobai\obj\Debug\QLKhobai.exe
+E:\Winform\QL_KhoBai\QLKhobai\QLKhobai\obj\Debug\QLKhobai.pdb

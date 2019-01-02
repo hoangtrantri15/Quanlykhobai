@@ -1,0 +1,87 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace QLKhobai.CONNECT
+{
+    public class DataConnect
+    {
+        private static DataConnect instance;
+
+        private string connectionSTR = "Data Source=DESKTOP-E42F18O;Initial Catalog=QLKHOBAI;Integrated Security=True";
+
+        public static DataConnect Instance
+        {
+            get { if (instance == null) instance = new DataConnect(); return instance; }
+            private set => instance = value;
+
+        }
+
+        private DataConnect() { }
+        public DataTable ExecuteQuery(string query, object[] parameter = null)
+        {
+            DataTable data = new DataTable();   // Tạo datatable
+
+            using (SqlConnection connection = new SqlConnection(connectionSTR)) // Khi lệnh thực thi kết thúc --> giải phóng bộ nhớ
+            {
+                connection.Open();  // Mở kết nối sql
+                SqlCommand command = new SqlCommand(query, connection); // Thực thi lệnh trong kết nối
+
+                // Kiểu parameter truyền vào có dạng @...
+
+                if (parameter != null)
+                {
+                    string[] listpa = query.Split(' ');
+                    int i = 0;
+                    foreach (string item in listpa)
+                    {
+                        if (item.Contains('@'))
+                        {
+                            command.Parameters.AddWithValue(item, parameter[i]);
+                            i++;
+                        }
+                    }
+                }
+
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                adapter.Fill(data);
+                connection.Close();
+            }
+
+            return data;
+        }
+        public int ExecuteNonQuery(string query, object[] parameter = null)
+        {
+            int data = 0;
+
+            using (SqlConnection connection = new SqlConnection(connectionSTR))
+            {
+                connection.Open();
+                SqlCommand command = new SqlCommand(query, connection);
+
+                if (parameter != null)
+                {
+                    string[] listpa = query.Split(' ');
+                    int i = 0;
+                    foreach (string item in listpa)
+                    {
+                        if (item.Contains('@'))
+                        {
+                            command.Parameters.AddWithValue(item, parameter[i]);
+                            i++;
+                        }
+                    }
+                }
+
+                data = command.ExecuteNonQuery();
+                connection.Close();
+            }
+
+            return data;
+        }
+    }
+}
